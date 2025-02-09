@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="./src/tabzy.css" />
+        <style>
+            .tabzy--active a {
+                color: red;
+                font-weight: 600;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Container -->
+        <ul id="tabs">
+            <!-- Tabs -->
+            <li>
+                <a href="#tab1">Tab 1</a>
+            </li>
+            <li>
+                <a href="#tab2">Tab 2</a>
+            </li>
+            <li>
+                <a href="#tab3">Tab 3</a>
+            </li>
+        </ul>
+
+        <!-- Panels -->
+        <div id="tab1">Tab1 content</div>
+        <div id="tab2">Tab2 content</div>
+        <div id="tab3">Tab3 content</div>
+
+        <script src="./src/tabzy.js"></script>
+        <script>
+            const tabs = new Tabzy("#tabs", {
+                // ...
+            });
+
+            // tabs.switch("#tab3"); // tabElement or panelSelector
+            // tabs.destroy();
+        </script>
+    </body>
+</html>
