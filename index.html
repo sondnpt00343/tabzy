@@ -54,6 +54,10 @@
         <script>
             const tabs1 = new Tabzy("#tabs1", {
                 remember: true,
+                onChange: (data) => {
+                    // data.tab, data.panel
+                    console.log(data);
+                },
             });
 
             const tabs2 = new Tabzy("#tabs2", {
